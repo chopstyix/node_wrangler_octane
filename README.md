@@ -40,4 +40,4 @@ If you feel like spending money to help, any donations are appreciated by this l
 
 ✅ Octane [26.5] - with nw_octane [1.2.1]
 
-✅ Octane [28.3][TEST] - with nw_octane [1.3.0]
+✅ Octane [28.5][TEST] - with nw_octane [1.3.1]
