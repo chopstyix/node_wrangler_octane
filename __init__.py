@@ -1641,6 +1641,7 @@ class NWPreviewNode(Operator, NWBase):
                         ExposureComp.inputs[2].default_value = True	
                         ExposureComp.inputs[9].default_value = False	
                         ExposureComp.inputs[10].default_value = False	
+                        ExposureComp.inputs[13].default_value = False
                         ExposureComp.location = [materialout.location.x - 50, (materialout.location.y + 50)]	
                         ExposureComp.name = "Oct Emission Viewer"
                     
