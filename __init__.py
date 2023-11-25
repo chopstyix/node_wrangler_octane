@@ -2,13 +2,13 @@
 
 bl_info = {
     "name": "Node Wrangler (Custom build for Octane)",
-    "author": "Bartek Skorupa, Greg Zaal, Sebastian Koenig, Christian Brinkmann, Florian Meyer, AiSatan, Ed O'Connell",
-    "version": (1, 3, 0),
-    "blender": (2, 93, 0),
+    "author": "Bartek Skorupa, Greg Zaal, Sebastian Koenig, Christian Brinkmann, Florian Meyer, AiSatan, Ed O'Connell, OPSTYIX",
+    "version": (1, 3, 1),
+    "blender": (3, 6, 5),
     "location": "Node Editor Toolbar or Shift-W",
     "description": "Various tools to enhance and speed up node-based workflow with Octane based on NW-v3.40",
     "warning": "",
-    "doc_url": "https://github.com/AiSatan/node_wrangler_octane",
+    "doc_url": "https://github.com/chopstyix/node_wrangler_octane",
     "category": "Node",
 }
 
@@ -1550,7 +1550,8 @@ class NWPreviewNode(Operator, NWBase):
 
             # What follows is code for the shader editor
             output_types = [x.nodetype for x in
-                            get_nodes_from_category_octane('Octane Output', context) if hasattr(x, 'nodetype')]
+                            # get_nodes_from_category_octane('Octane Output', context) if hasattr(x, 'nodetype')]
+                            get_nodes_from_category_octane('Output', context) if hasattr(x, 'nodetype')]
             valid = False
             oct_valid = False
             if active:
