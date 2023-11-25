@@ -1628,8 +1628,8 @@ class NWPreviewNode(Operator, NWBase):
                         emission.label = "Octane Viewer"
                         emission.inputs[0].default_value = (0, 0, 0)  
                         emission.name = "Octane Viewer"
-                        emission.location = [materialout.location.x - 100, (materialout.location.y + 50)]	
-                        emission.hide = True	
+                        emission.location = [materialout.location.x - 50, (materialout.location.y + 50)]	
+                        emission.hide = True	                        
 
                         ExposureComp = base_node_tree.nodes.new("OctaneTextureEmission")	
                         ExposureComp.label = "Oct Emission Viewer"	
@@ -1644,7 +1644,15 @@ class NWPreviewNode(Operator, NWBase):
                         ExposureComp.inputs[13].default_value = False
                         ExposureComp.location = [materialout.location.x - 50, (materialout.location.y + 50)]	
                         ExposureComp.name = "Oct Emission Viewer"
-                    
+
+                        for i in emission.inputs:
+                            if i.name != "Emission":
+                                i.hide = True
+
+                        for i in ExposureComp.inputs:
+                            if i.name != "Texture":
+                                i.hide = True                        
+
                         make_links.append((emission.outputs[0], materialout.inputs[materialout_index]))	
                         make_links.append((ExposureComp.outputs[0],emission.inputs["Emission"]))	
                         make_links.append((ExposureComp.inputs[0],active.outputs[0]))
