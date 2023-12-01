@@ -1639,6 +1639,7 @@ class NWPreviewNode(Operator, NWBase):
                         else:
                             ExposureComp.inputs[1].default_value = (1/context.scene.camera.data.octane.imager.exposure)	    
                         ExposureComp.inputs[2].default_value = True	
+                        ExposureComp.inputs[4].default_value = True
                         ExposureComp.inputs[9].default_value = False	
                         ExposureComp.inputs[10].default_value = False	
                         ExposureComp.inputs[13].default_value = False
